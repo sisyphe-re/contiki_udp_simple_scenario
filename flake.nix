@@ -15,6 +15,7 @@
         if [ -z ''${FITIOT_USER+x} ]; then echo "FITIOT_USER is unset."; exit 1; else echo "FITIOT_USER is set to '$FITIOT_USER'."; fi
         if [ -z ''${FITIOT_PRIVATE_KEY+x} ]; then echo "FITIOT_PRIVATE_KEY is unset."; exit 1; else echo "FITIOT_PRIVATE_KEY is set."; fi
         if [ -z ''${FITIOT_PUBLIC_KEY+x} ]; then echo "FITIOT_PUBLIC_KEY is unset."; exit 1; else echo "FITIOT_PUBLIC_KEY is set."; fi
+        if [ -z ''${FITIOT_RC+x} ]; then echo "FITIOT_RC is unset."; exit 1; else echo "FITIOT_RC is set."; fi
 
         if [ -z ''${SSH_PORT+x} ]; then echo "SSH_PORT is unset."; exit 1; else echo "SSH_PORT is set to '$SSH_PORT'."; fi
         if [ -z ''${SSH_USER+x} ]; then echo "SSH_USER is unset."; exit 1; else echo "SSH_USER is set to '$SSH_USER'."; fi
@@ -22,8 +23,6 @@
         if [ -z ''${SSH_PATH+x} ]; then echo "SSH_PATH is unset."; exit 1; else echo "SSH_PATH is set to '$SSH_PATH'."; fi
         if [ -z ''${SSH_PRIVATE_KEY+x} ]; then echo "SSH_PRIVATE_KEY is unset."; exit 1; else echo "SSH_PRIVATE_KEY is set."; fi
         if [ -z ''${SSH_PUBLIC_KEY+x} ]; then echo "SSH_PUBLIC_KEY is unset."; exit 1; else echo "SSH_PUBLIC_KEY is set."; fi
-
-        if [ -z ''${FITIOT_RC+x} ]; then echo "FITIOT_RC is unset."; exit 1; else echo "FITIOT_RC is set."; fi
 
         echo "HOME is ''${HOME}"
         cd ~/;
