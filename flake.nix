@@ -3,7 +3,17 @@
   inputs.nixpkgs.url = github:NixOS/nixpkgs/nixos-20.03;
   inputs.iotlabcli.url = github:sisyphe-re/iotlabcli;
 
-  outputs = { self, nixpkgs, iotlabcli }:
+  inputs.iot-lab = {
+    url = "github:iot-lab/iot-lab";
+    flake = false;
+  };
+
+  inputs.traces = {
+    url = "git+https://gitlab.irisa.fr/0000H82G/traces.git";
+    flake = false;
+  };
+
+  outputs = { self, nixpkgs, iotlabcli, iot-lab, traces }:
     with import nixpkgs { system = "x86_64-linux"; };
     let
       run_script = pkgs.writeScriptBin "run" ''
@@ -39,8 +49,8 @@
         echo "Setting up secret";
         echo "''${FITIOT_RC}" &> ~/.iotlabrc
 
-        git clone "https://gitlab.irisa.fr/0000H82G/traces.git" traces;
-        git clone "https://github.com/iot-lab/iot-lab.git" iot-lab;
+        cp -r ${traces} traces;
+        cp -r ${iot-lab} iot-lab;
         cd iot-lab/;
         make setup-contiki;
         cp ../traces/src/broadcast-example.c ./parts/contiki/examples/ipv6/simple-udp-rpl/broadcast-example.c;

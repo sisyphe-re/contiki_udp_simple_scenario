@@ -1,5 +1,21 @@
 {
   "nodes": {
+    "iot-lab": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1557303261,
+        "narHash": "sha256-wGhi2T2u7k/GQHXaUXq6ohffTOk9trerDEIKqAp0FYU=",
+        "owner": "iot-lab",
+        "repo": "iot-lab",
+        "rev": "7ad7ac161816e3137039ab9d6a3c91fc23c6d2ba",
+        "type": "github"
+      },
+      "original": {
+        "owner": "iot-lab",
+        "repo": "iot-lab",
+        "type": "github"
+      }
+    },
     "iotlabcli": {
       "inputs": {
         "nixpkgs": "nixpkgs"
@@ -52,8 +68,26 @@
     },
     "root": {
       "inputs": {
+        "iot-lab": "iot-lab",
         "iotlabcli": "iotlabcli",
-        "nixpkgs": "nixpkgs_2"
+        "nixpkgs": "nixpkgs_2",
+        "traces": "traces"
+      }
+    },
+    "traces": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1625737702,
+        "narHash": "sha256-jq/yYqjQnCGxSMtOPDl66dbgBhusxcgMa2C4xaUXU/A=",
+        "ref": "master",
+        "rev": "d18a4f01708bd7ea0ae9570172ed262e8b83c241",
+        "revCount": 29,
+        "type": "git",
+        "url": "https://gitlab.irisa.fr/0000H82G/traces.git"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://gitlab.irisa.fr/0000H82G/traces.git"
       }
     }
   },
