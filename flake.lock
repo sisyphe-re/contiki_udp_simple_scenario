@@ -79,15 +79,15 @@
       "locked": {
         "lastModified": 1625737702,
         "narHash": "sha256-jq/yYqjQnCGxSMtOPDl66dbgBhusxcgMa2C4xaUXU/A=",
-        "ref": "master",
+        "owner": "sisyphe-re",
+        "repo": "traces",
         "rev": "d18a4f01708bd7ea0ae9570172ed262e8b83c241",
-        "revCount": 29,
-        "type": "git",
-        "url": "https://gitlab.irisa.fr/0000H82G/traces.git"
+        "type": "github"
       },
       "original": {
-        "type": "git",
-        "url": "https://gitlab.irisa.fr/0000H82G/traces.git"
+        "owner": "sisyphe-re",
+        "repo": "traces",
+        "type": "github"
       }
     }
   },

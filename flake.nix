@@ -9,7 +9,7 @@
   };
 
   inputs.traces = {
-    url = "git+https://gitlab.irisa.fr/0000H82G/traces.git";
+    url = "github:sisyphe-re/traces";
     flake = false;
   };
 
